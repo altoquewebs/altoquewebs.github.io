@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://valentinzinola25-pixel.github.io/altoquewebs/sitemap.xml
