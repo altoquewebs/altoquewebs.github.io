@@ -2,10 +2,10 @@
   /* ====== ESTADÍSTICAS DE VISITAS (Umami, gratis y sin cookies) ======
      Pegá entre las comillas el "Website ID" que te da Umami.
      Mientras esté vacío, la página no mide ni envía nada. */
-  var UMAMI_ID = "";
+  var UMAMI_ID = "50268e19-cc3b-42f4-81ee-2fcb4aaffde0";
   /* =================================================================== */
 
-  var URL_SEND = "https://cloud.umami.is/api/send";
+  var URL_SEND = "https://gateway.umami.is/api/send";
   var local = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) || location.protocol === "file:";
   var on = !!UMAMI_ID && !local;
 
