@@ -190,6 +190,20 @@
     }
   }
 
+  /* servicios "próximamente": el aviso sale por WhatsApp; sin WhatsApp, va al formulario */
+  document.querySelectorAll("[data-soon]").forEach(function(a){
+    var s = a.getAttribute("data-soon");
+    if (waNum) {
+      a.href = waLink("Hola, vi la página de Al Toque Webs. Me interesa el servicio \"" + s + "\": avisame cuando esté disponible.");
+      a.target = "_blank"; a.rel = "noopener noreferrer";
+    } else {
+      a.addEventListener("click", function(){
+        var r = document.querySelector('#chips input[value="No sé todavía"]'); if (r) r.checked = true;
+        if (!f.idea.value.trim()) f.idea.value = "Me interesa el servicio \"" + s + "\": avisame cuando esté disponible.";
+      });
+    }
+  });
+
   document.querySelectorAll("[data-plan]").forEach(function(a){
     a.addEventListener("click", function(){
       var v = a.getAttribute("data-plan");
@@ -221,6 +235,7 @@
     if (EMAIL) mail.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     if (waNum) wa.href = waLink("Hola, te escribo desde la página de Al Toque Webs.\n\n" + body);
     copyBtn.querySelector("span").textContent = "Copiar mensaje";
+    if (window.atwTrack) atwTrack("Formulario: mensaje preparado", { servicio: serv });
     f.style.display = "none"; done.classList.add("show");
     done.querySelector("h3").setAttribute("tabindex", "-1"); done.querySelector("h3").focus();
   });

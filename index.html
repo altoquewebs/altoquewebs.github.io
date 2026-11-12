@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#05070b">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://cloud.umami.is; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <link rel="canonical" href="https://valentinzinola25-pixel.github.io/altoquewebs/">
 <meta property="og:url" content="https://valentinzinola25-pixel.github.io/altoquewebs/">
 <meta property="og:type" content="website">
@@ -186,6 +186,9 @@ section{padding:clamp(72px,10vw,120px) 0;position:relative}
 .auto .ic{width:48px;height:48px;border-radius:14px;background:rgba(47,107,255,.16);border:1px solid rgba(47,107,255,.5);display:grid;place-items:center;margin-bottom:20px}
 .auto h3{font-size:clamp(22px,2.2vw,26px);margin-bottom:10px}
 .auto p{margin:0;color:var(--muted);font-size:16px}
+.auto .soon{display:inline-block;margin-bottom:14px;border:1px solid #33435c;color:var(--sky);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600}
+.auto .ask{display:inline-block;margin-top:16px;color:var(--sky);font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.auto .ask:hover{color:var(--text)}
 .auto-cta{margin-top:20px;border:1px solid var(--line);background:linear-gradient(90deg,var(--panel),transparent);border-radius:22px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .auto-cta p{margin:0;color:var(--muted);font-size:16px;max-width:56ch}
 .auto-cta p b{color:var(--text);font-weight:600}
@@ -339,7 +342,7 @@ footer a{color:var(--sky);text-underline-offset:3px}
       <a class="t" href="#precios">Precios</a>
       <a class="t" href="#automatizaciones">Automatizaciones</a>
       <a class="t" href="#preguntas">Preguntas</a>
-      <a class="btn blue" data-magnetic href="#contacto"><span>Contame tu idea</span></a>
+      <a class="btn blue" data-magnetic href="#contacto" data-ev="Botón: Contame tu idea (menú)"><span>Contame tu idea</span></a>
     </nav>
   </div>
 </header>
@@ -352,8 +355,8 @@ footer a{color:var(--sky);text-underline-offset:3px}
         <h1>Tu comercio en internet en <span class="soft">una semana.</span></h1>
         <p class="sub">Páginas web a medida para comercios de Uruguay, <strong>desde $2.900</strong>. Que tus clientes te encuentren, vean lo que hacés y te contacten.</p>
         <div class="ctas">
-          <a class="btn blue" data-magnetic href="#contacto"><span>Contame tu idea</span></a>
-          <a class="btn line" href="#precios"><span>Ver precios</span></a>
+          <a class="btn blue" data-magnetic href="#contacto" data-ev="Botón: Contame tu idea (portada)"><span>Contame tu idea</span></a>
+          <a class="btn line" href="#precios" data-ev="Botón: Ver precios"><span>Ver precios</span></a>
         </div>
         <ul class="trust">
           <li>Presupuesto sin compromiso</li>
@@ -473,7 +476,7 @@ footer a{color:var(--sky);text-underline-offset:3px}
             <li>Te ayudo a aparecer en Google Maps</li>
             <li>Se ve perfecta en celular, tablet y computadora</li>
           </ul>
-          <a class="btn white" data-magnetic href="#contacto" data-plan="Web completa"><span>Quiero la web completa</span></a>
+          <a class="btn white" data-magnetic href="#contacto" data-plan="Web completa" data-ev="Quiero: Web completa"><span>Quiero la web completa</span></a>
         </article>
         <div class="side">
           <article class="plan alt tilt">
@@ -481,14 +484,14 @@ footer a{color:var(--sky);text-underline-offset:3px}
             <div class="amount"><small>$</small>2.900</div>
             <p>Una sola página con todo lo importante de tu negocio y un formulario de contacto. Lista en 5 días.</p>
             <p class="split alt"><b>$1.450</b> al empezar <i>+</i> <b>$1.450</b> al terminar</p>
-            <a href="#contacto" data-plan="Landing page">Quiero la landing</a>
+            <a href="#contacto" data-plan="Landing page" data-ev="Quiero: Landing page">Quiero la landing</a>
           </article>
           <article class="plan alt tilt">
             <h3>Menú con QR</h3>
             <div class="amount"><small>$</small>1.900</div>
             <p>Tu carta online con fotos y precios, y el QR listo para imprimir en las mesas. Lista en 3 días.</p>
             <p class="split alt"><b>$950</b> al empezar <i>+</i> <b>$950</b> al terminar</p>
-            <a href="#contacto" data-plan="Menú con QR">Quiero el menú</a>
+            <a href="#contacto" data-plan="Menú con QR" data-ev="Quiero: Menú con QR">Quiero el menú</a>
           </article>
         </div>
       </div>
@@ -524,7 +527,36 @@ footer a{color:var(--sky);text-underline-offset:3px}
       </div>
       <div class="auto-cta">
         <p><b>Se cotiza según lo que necesites.</b> Contame qué tarea repetís todos los días y te digo si se puede automatizar y cuánto saldría, sin compromiso.</p>
-        <a class="btn line" href="#contacto" data-plan="Automatización"><span>Quiero automatizar algo</span></a>
+        <a class="btn line" href="#contacto" data-plan="Automatización" data-ev="Quiero: Automatización"><span>Quiero automatizar algo</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="proximamente">
+    <div class="wrap">
+      <div class="lead">
+        <h2>Lo que se viene.</h2>
+        <p>Tres servicios que estoy preparando. Todavía no están disponibles: si alguno te sirve, avisame y te escribo cuando esté listo.</p>
+      </div>
+      <div class="autos">
+        <article class="auto">
+          <span class="soon">Próximamente</span>
+          <h3>Asistente de WhatsApp</h3>
+          <p>Un asistente que contesta a tus clientes y les agenda turnos por WhatsApp a cualquier hora, aunque el local esté cerrado.</p>
+          <a class="ask" href="#contacto" data-soon="Asistente de WhatsApp" data-ev="Interés: Asistente de WhatsApp">Avisame cuando esté</a>
+        </article>
+        <article class="auto">
+          <span class="soon">Próximamente</span>
+          <h3>Tu Mercado Libre, mejor</h3>
+          <p>Títulos, fotos y descripciones de tus publicaciones ordenados para que te encuentren más y vendas más.</p>
+          <a class="ask" href="#contacto" data-soon="Mejora de publicaciones en Mercado Libre" data-ev="Interés: Mercado Libre">Avisame cuando esté</a>
+        </article>
+        <article class="auto">
+          <span class="soon">Próximamente</span>
+          <h3>Videos para tus redes</h3>
+          <p>Videos cortos y animados que muestran tu negocio, listos para Instagram y para los estados de WhatsApp.</p>
+          <a class="ask" href="#contacto" data-soon="Videos para redes" data-ev="Interés: Videos para redes">Avisame cuando esté</a>
+        </article>
       </div>
     </div>
   </section>
@@ -594,7 +626,7 @@ footer a{color:var(--sky);text-underline-offset:3px}
           <li><i></i><span>No necesitás tener todo claro: lo armamos juntos</span></li>
         </ul>
         <div class="direct" id="direct" hidden>
-          <a class="btn line" id="waDirect" href="#" target="_blank" rel="noopener noreferrer" hidden><span>Prefiero escribir por WhatsApp</span></a>
+          <a class="btn line" id="waDirect" data-ev="WhatsApp: botón de contacto" href="#" target="_blank" rel="noopener noreferrer" hidden><span>Prefiero escribir por WhatsApp</span></a>
           <small id="directText"></small>
         </div>
       </div>
@@ -631,9 +663,9 @@ footer a{color:var(--sky);text-underline-offset:3px}
           <pre id="preview"></pre>
           <p class="setup" id="setup" hidden>Falta configurar el contacto: completá EMAIL y/o WHATSAPP al principio del script para que los mensajes te lleguen.</p>
           <div class="acts">
-            <a class="btn blue" id="wa" href="#" target="_blank" rel="noopener noreferrer" hidden><span>Enviar por WhatsApp</span></a>
-            <a class="btn blue" id="mail" href="#" hidden><span>Abrir en mi correo</span></a>
-            <button class="btn line" type="button" id="copy"><span>Copiar mensaje</span></button>
+            <a class="btn blue" id="wa" data-ev="Formulario: enviado por WhatsApp" href="#" target="_blank" rel="noopener noreferrer" hidden><span>Enviar por WhatsApp</span></a>
+            <a class="btn blue" id="mail" data-ev="Formulario: enviado por correo" href="#" hidden><span>Abrir en mi correo</span></a>
+            <button class="btn line" type="button" id="copy" data-ev="Formulario: mensaje copiado"><span>Copiar mensaje</span></button>
           </div>
           <p class="addr" id="addrLine" hidden>Enviar a: <b id="addr"></b></p>
           <button class="back" type="button" id="back">Editar el mensaje</button>
@@ -644,10 +676,10 @@ footer a{color:var(--sky);text-underline-offset:3px}
 </main>
 
 <footer>
-  <div class="wrap"><span>© 2026 Al Toque Webs, Uruguay</span><span id="footContact">Páginas web y automatizaciones para comercios</span></div>
+  <div class="wrap"><span>© 2026 Al Toque Webs, Uruguay</span><span id="footContact">Páginas web y automatizaciones para comercios</span><span id="statsNote" hidden>Esta página cuenta las visitas de forma anónima, sin cookies.</span></div>
 </footer>
 
-<a class="fab" id="fab" href="#" target="_blank" rel="noopener noreferrer" aria-label="Escribime por WhatsApp" hidden>
+<a class="fab" id="fab" data-ev="WhatsApp: botón flotante" href="#" target="_blank" rel="noopener noreferrer" aria-label="Escribime por WhatsApp" hidden>
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.2-4.6A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 10.5h7M8.5 14h4.5"/></svg>
   <span>WhatsApp</span>
 </a>
@@ -1198,6 +1230,7 @@ h1{font-size:clamp(46px,9vw,76px)}
   <div id="demoBody" tabindex="-1"></div>
 </div>
 
+<script src="assets/stats.js"></script>
 <script src="assets/site.js"></script>
 <script src="assets/gsap.min.js"></script>
 <script src="assets/ScrollTrigger.min.js"></script>
